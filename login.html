@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="logo.png" alt="Netflix Logo">
+    </header>
+    <form action=" ">
+      <h1>Sign In</h1>
+      <input type="text" placeholder="Email Id or Phone number">
+      <div style="position: relative;">
+        <input type="password" placeholder="Password" id="Password" oninput="showPasswordToggle()">
+        <span id="passwordToggle" onclick="togglePassword()">Show</span>
+      </div>
+
+      <button type="submit">Sign In</button>
+      <label>
+        <span><input type="checkbox" name="" id=""> Remember me</span>
+        <a href="#">Need help?</a>
+      </label>
+      <br>
+      <br>
+      <br>
+      <span>New to Netflix? <a href="#">Sign up now</a></span>
+      <br><br>
+      <p>Sign in is protected by Google reCAPTCHA to ensure you’re not a bot. <a href="#"
+          class="link">&lt;![CDATA[&lt;b&gt;Learn more.&lt;/b&gt;]]&gt;</a></p>
+    </form>
+  </div>
+  <script>
+    function showPasswordToggle() {
+      var passwordField = document.getElementById("Password");
+      var passwordToggle = document.getElementById("passwordToggle");
+      if (passwordField.value.length > 0) {
+        passwordToggle.style.display = "inline-block";
+      } else {
+        passwordToggle.style.justifyContent = "flex-end";
+      }
+    }
+
+  </script>
+</body>
+
+</html>
